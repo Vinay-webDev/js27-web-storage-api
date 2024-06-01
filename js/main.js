@@ -20,18 +20,30 @@ console.log(mySessionData);
 window.sessionStorage.setItem("mySessionStorage2", myArray);
 const mySessionData2 = sessionStorage.getItem("mySessionStorage2");
 console.log(mySessionData2);*/
-
+/*
 const myArray = ["eat", "code", "sleep"];
 const myObject = {
     name: "jack bulwark",
     hobbies: ["eat", "fight", "sleep"],
+    logName: function () {
+        console.log(this.name);
+    }
 }
 
 sessionStorage.setItem("mySessionStore", JSON.stringify(myObject));
 const sessionData = JSON.parse(sessionStorage.getItem("mySessionStore"));
+console.log(sessionData); */
+const myArray1 = ["eat", "fight", "sleep"];
+
+sessionStorage.setItem("mySessionStore1", myArray1);
+const sessionData1 = sessionStorage.getItem("mySessionStore1");
+console.log(sessionData1);
+/////////////////////////////////////////////////
+const myArray = ["eat", "fight", "sleep"];
+
+sessionStorage.setItem("mySessionStore", JSON.stringify(myArray));
+const sessionData = JSON.parse(sessionStorage.getItem("mySessionStore"));
 console.log(sessionData);
-
-
 
 
 
