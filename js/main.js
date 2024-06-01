@@ -3,7 +3,7 @@
 // refers to window API
 // available to javascript via global variable = window;
 // we don't have to type window it is implied:
-
+/*
 const myObject = {
     name: "jack",
     logName: function() {
@@ -19,11 +19,17 @@ console.log(mySessionData);
 
 window.sessionStorage.setItem("mySessionStorage2", myArray);
 const mySessionData2 = sessionStorage.getItem("mySessionStorage2");
-console.log(mySessionData2);
+console.log(mySessionData2);*/
 
+const myArray = ["eat", "code", "sleep"];
+const myObject = {
+    name: "jack bulwark",
+    hobbies: ["eat", "fight", "sleep"],
+}
 
-
-
+sessionStorage.setItem("mySessionStore", JSON.stringify(myObject));
+const sessionData = JSON.parse(sessionStorage.getItem("mySessionStore"));
+console.log(sessionData);
 
 
 
