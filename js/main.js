@@ -56,12 +56,34 @@ const myObject = {
 }
 // localStorage = is a persistant storage means whenever we close the web app the data is still available when we open the web app again
 // sessionStorage = is a temporary storage which will be gone if close out the web app 
-localStorage.setItem("myLocalStore", JSON.stringify(myObject));
+/////////////////////////////////////////
+/*localStorage.setItem("myLocalStore", JSON.stringify(myObject));
 
 const localData = JSON.parse(localStorage.getItem("myLocalStore"));
 
 console.log(localData);
-console.log( typeof localData);
+console.log( typeof localData); */
+////////////////////////////////////////////
+// now let's look at few methods and atleast one property about web storage api
+/* 1.removeItem()
+   2.clear()
+   3.key()
+   4.length */ 
+localStorage.setItem("myLocalStore", JSON.stringify(myObject));
+localStorage.setItem("myLocalStore2", JSON.stringify(myArray));
+//localStorage.removeItem("myLocalStore");
+//localStorage.clear();
+//const key = localStorage.key(0);
+// what if we have multiple stores then need specify the index of that store
+//const key = localStorage.key(1);
+//////////////
+localStorage.removeItem("myLocalStore2");
+const storeLength = localStorage.length;
+////////////////
+const myLocalData = JSON.parse(localStorage.getItem("myLocalStore"));
+//console.log(myLocalData);
+//console.log(key);
+console.log(storeLength);
 
 
 
